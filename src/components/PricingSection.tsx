@@ -128,7 +128,7 @@ const PricingSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8 }}
           className="mt-10 max-w-lg mx-auto"
         >
           <p className="font-body text-sm text-muted-foreground text-center leading-relaxed">
