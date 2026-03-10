@@ -3,7 +3,7 @@ import { Zap, ArrowRight } from "lucide-react";
 
 const FreeLessonSection = () => {
   return (
-    <section className="py-32 px-6 relative overflow-hidden">
+    <section className="py-20 sm:py-32 px-6 relative overflow-hidden">
       {/* Subtle glow behind */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/[0.04] blur-[120px] rounded-full pointer-events-none" />
 
