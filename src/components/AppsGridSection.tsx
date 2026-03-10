@@ -251,16 +251,19 @@ const AppsGridSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="border border-primary/20 bg-primary/[0.03] p-8 sm:p-12 relative overflow-hidden"
+          className="border border-signal/30 bg-signal/[0.03] p-8 sm:p-12 relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary" />
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-signal" />
           
           <div className="text-center mb-8">
-            <h3 className="font-display text-lg sm:text-xl uppercase tracking-tight mb-2">
-              L'evoluzione completa di un <span className="text-signal">SaaS reale</span>
+            <h3 className="font-display text-xl sm:text-2xl uppercase tracking-tight mb-3">
+              Alla fine del percorso avrai costruito
+              <br />
+              tutti i pezzi di un <span className="text-signal">SaaS reale</span>
             </h3>
-            <p className="font-body text-sm text-muted-foreground">
-              Chi completa le 32 app ha costruito tutti i pezzi fondamentali
+            <p className="font-body text-sm text-muted-foreground max-w-lg mx-auto">
+              Nessun corso ti dà questo. 32 applicazioni interattive che, messe insieme, 
+              coprono l'intera evoluzione di un prodotto software professionale.
             </p>
           </div>
 
@@ -272,16 +275,20 @@ const AppsGridSection = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.08 }}
-                  className="bg-secondary border border-border px-4 py-2 hover:border-primary/40 hover:bg-primary/[0.05] transition-all"
+                  className="bg-secondary border border-border px-4 py-2 hover:border-signal/40 hover:bg-signal/[0.05] transition-all"
                 >
                   <span className="font-body text-xs sm:text-sm text-foreground font-medium">{step}</span>
                 </motion.div>
                 {i < saasSteps.length - 1 && (
-                  <span className="text-primary/40 mx-1 hidden sm:inline font-body text-lg">→</span>
+                  <span className="text-signal/40 mx-1 hidden sm:inline font-body text-lg">→</span>
                 )}
               </div>
             ))}
           </div>
+
+          <p className="font-body text-xs text-muted-foreground text-center mt-6 uppercase tracking-wider">
+            Un approccio che <span className="text-signal font-medium">non troverai in nessun altro corso online</span>
+          </p>
         </motion.div>
       </div>
     </section>
