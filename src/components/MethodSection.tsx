@@ -190,7 +190,7 @@ const MethodSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8 }}
           className="mt-8 border border-primary/20 bg-primary/[0.03] p-8 sm:p-12 relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary/50 via-primary/20 to-transparent" />
