@@ -24,6 +24,7 @@ const Index = () => {
       <InstructorSection />
       <CertificateSection />
       <PricingSection />
+      <FreeLessonSection />
       <FinalCTA />
 
       {/* Footer */}
