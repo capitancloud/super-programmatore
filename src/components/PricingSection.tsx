@@ -103,7 +103,7 @@ const PricingSection = () => {
 
             <a
               href="#"
-              className="group relative inline-flex w-full items-center justify-center bg-primary text-primary-foreground font-body font-bold text-lg px-10 py-5 uppercase tracking-wider overflow-hidden transition-all hover:shadow-[0_0_60px_hsl(51_100%_50%/0.3)]"
+              className="group relative inline-flex w-full items-center justify-center bg-primary text-primary-foreground font-body font-bold text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 uppercase tracking-wider overflow-hidden transition-all hover:shadow-[0_0_60px_hsl(51_100%_50%/0.3)]"
             >
               <span className="relative z-10">Accedi ora — 97€</span>
               <div className="absolute inset-0 bg-foreground/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
