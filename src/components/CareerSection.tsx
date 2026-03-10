@@ -44,19 +44,15 @@ const CareerSection = () => {
 
         {/* Stats row */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16"
         >
           {stats.map((stat, i) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               className="border border-signal/20 bg-signal/[0.03] p-6 sm:p-8 text-center group hover:border-signal/40 transition-colors"
             >
               <span className="font-display text-3xl sm:text-4xl text-signal block mb-2">
@@ -65,7 +61,7 @@ const CareerSection = () => {
               <span className="font-body text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">
                 {stat.label}
               </span>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
 
