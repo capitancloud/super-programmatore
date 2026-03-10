@@ -22,7 +22,7 @@ const FreeLessonSection = () => {
             </span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight leading-[1.1] mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight leading-[1.1] mb-6">
             <span className="text-signal">LA SFIDA:</span>
             <br />
             In meno di 10 minuti ti insegno a creare una{" "}
