@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import videoCover from "@/assets/video-cover.jpg";
 
@@ -6,12 +5,7 @@ const VideoSection = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 relative">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-primary" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-medium">
@@ -28,24 +22,15 @@ const VideoSection = () => {
           <p className="font-body text-muted-foreground text-lg text-center max-w-xl mx-auto mb-14">
             Ti spiego chi sono, come funziona il percorso e perché è diverso da qualsiasi altro corso online.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
+        <div className="relative">
           {/* Outer glow frame */}
           <div className="absolute -inset-[1px] bg-gradient-to-b from-primary/30 via-primary/10 to-primary/30" />
 
           {/* Video container - 16:9 aspect ratio */}
           <div className="relative bg-card aspect-video flex flex-col items-center justify-end overflow-hidden">
-            {/* Placeholder - will be replaced with video embed */}
             <img src={videoCover} alt="Super Programmatore" className="absolute inset-0 w-full h-full object-contain bg-black" />
-
-            {/* Grid overlay */}
             <div className="absolute inset-0 grid-overlay opacity-20" />
 
             {/* Play button */}
@@ -64,7 +49,7 @@ const VideoSection = () => {
             <div className="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-primary/40" />
             <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-primary/40" />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

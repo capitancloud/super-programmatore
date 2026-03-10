@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Clock, AlertTriangle } from "lucide-react";
 import Particles from "./Particles";
 
@@ -8,12 +7,7 @@ const PricingSection = () => {
       <Particles count={15} />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-primary" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-medium">
@@ -29,35 +23,21 @@ const PricingSection = () => {
             Il valore completo del programma è 997€. Per il lancio, accedi all'intero
             percorso a una frazione del prezzo.
           </p>
-        </motion.div>
+        </div>
 
         {/* Urgency banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 sm:gap-3 bg-signal/10 border border-signal/30 px-4 sm:px-6 py-3 mb-16 text-center"
-        >
+        <div className="inline-flex items-center gap-2 sm:gap-3 bg-signal/10 border border-signal/30 px-4 sm:px-6 py-3 mb-16 text-center">
           <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0 hidden sm:block" />
           <span className="font-body text-xs sm:text-sm text-signal font-semibold">
             Il prezzo tornerà a 997€ a brevissimo — questa offerta non durerà
           </span>
           <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0 hidden sm:block" />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          className="relative max-w-lg mx-auto"
-        >
-          {/* Outer glow frame */}
+        <div className="relative max-w-lg mx-auto">
           <div className="absolute -inset-[1px] bg-gradient-to-b from-primary/30 via-primary/10 to-primary/30" />
 
           <div className="relative bg-card p-10 sm:p-14">
-            {/* Top accent bar */}
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary" />
 
             <div className="mb-10">
@@ -70,14 +50,12 @@ const PricingSection = () => {
                 Accesso completo al percorso
               </p>
 
-              {/* Savings badge */}
               <div className="inline-flex items-center gap-2 bg-signal/10 border border-signal/30 px-5 py-2.5 mt-5">
                 <span className="font-body text-sm text-signal font-bold uppercase tracking-wider">
                   Risparmi 900€
                 </span>
               </div>
 
-              {/* Price per day */}
               <p className="font-body text-muted-foreground text-xs mt-4">
                 Meno di <span className="text-foreground font-medium">0,27€ al giorno</span> — accesso illimitato, per sempre
               </p>
@@ -113,7 +91,6 @@ const PricingSection = () => {
               Pagamento sicuro. Accesso immediato.
             </p>
 
-            {/* Urgency bottom note */}
             <div className="mt-6 flex items-center justify-center gap-2 text-signal/80">
               <Clock className="w-3.5 h-3.5" />
               <span className="font-body text-[11px] uppercase tracking-wider font-medium">
@@ -121,16 +98,9 @@ const PricingSection = () => {
               </span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Social proof / scarcity */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-10 max-w-lg mx-auto"
-        >
+        <div className="mt-10 max-w-lg mx-auto">
           <p className="font-body text-sm text-muted-foreground text-center leading-relaxed">
             Pensa a quanto spenderesti per un bootcamp (da 3.000€ a 10.000€), 
             per un corso universitario, o anche solo per un singolo corso online avanzato. 
@@ -138,7 +108,7 @@ const PricingSection = () => {
             <br />
             <span className="text-signal font-medium">Non succederà di nuovo.</span>
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

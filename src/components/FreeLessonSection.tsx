@@ -1,20 +1,12 @@
-import { motion } from "framer-motion";
 import { Zap, ArrowRight } from "lucide-react";
 
 const FreeLessonSection = () => {
   return (
     <section className="py-20 sm:py-32 px-6 relative overflow-hidden">
-      {/* Subtle glow behind */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/[0.04] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-3xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 border border-primary/30 bg-primary/[0.08] px-5 py-2 mb-8">
             <Zap className="w-4 h-4 text-primary" />
             <span className="font-body text-xs uppercase tracking-[0.2em] text-primary font-medium">
@@ -35,16 +27,9 @@ const FreeLessonSection = () => {
           <p className="font-body text-foreground font-medium text-base sm:text-lg">
             Tutto questo senza scrivere una singola riga di codice "tradizionale".
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
-        >
-          {/* Outer glow */}
+        <div className="relative">
           <div className="absolute -inset-[1px] bg-gradient-to-b from-primary/30 via-primary/10 to-primary/30" />
 
           <div className="relative bg-card p-8 sm:p-14 text-center">
@@ -79,7 +64,7 @@ const FreeLessonSection = () => {
               ⭐ 100% Gratuito — Nessuna carta richiesta
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

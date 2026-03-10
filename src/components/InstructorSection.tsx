@@ -1,16 +1,10 @@
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const InstructorSection = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 relative">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <div className="flex items-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-primary" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-medium">
@@ -25,10 +19,8 @@ const InstructorSection = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12 items-start">
-            {/* Monogram portrait */}
             <div className="relative mx-auto md:mx-0">
               <div className="w-[240px] h-[300px] bg-card border border-border flex flex-col items-center justify-center relative overflow-hidden">
-                {/* Grid lines inside */}
                 <div className="absolute inset-0 grid-overlay opacity-40" />
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 
@@ -42,7 +34,6 @@ const InstructorSection = () => {
                 
                 <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
               </div>
-              {/* Corner accents */}
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t border-l border-primary" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-primary" />
             </div>
@@ -97,7 +88,7 @@ const InstructorSection = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
