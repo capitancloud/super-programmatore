@@ -1,17 +1,10 @@
-import { motion } from "framer-motion";
-
 const ProblemSection = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 relative">
       <div className="absolute inset-0 grid-overlay opacity-30" />
       
       <div className="max-w-3xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           {/* Section label */}
           <div className="flex items-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-primary" />
@@ -54,7 +47,7 @@ const ProblemSection = () => {
               È un sistema per acquisire la competenza più richiesta nel mercato tecnologico moderno.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

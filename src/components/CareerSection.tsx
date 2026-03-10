@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { TrendingUp, Briefcase, ArrowUpRight } from "lucide-react";
+import { TrendingUp, Briefcase } from "lucide-react";
 
 const stats = [
   { value: "+450%", label: "Crescita richiesta AI developer dal 2023" },
@@ -10,17 +9,10 @@ const stats = [
 const CareerSection = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
-      {/* Subtle background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-signal/[0.03] blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <div className="flex items-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-signal" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-signal font-medium">
@@ -40,17 +32,11 @@ const CareerSection = () => {
             che sappiano costruire software con l'intelligenza artificiale — e la domanda 
             cresce ogni giorno.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16"
-        >
-          {stats.map((stat, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className="border border-signal/20 bg-signal/[0.03] p-6 sm:p-8 text-center group hover:border-signal/40 transition-colors"
@@ -63,17 +49,11 @@ const CareerSection = () => {
               </span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Two columns: pain vs opportunity */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="border border-border bg-card p-8 sm:p-10 relative overflow-hidden"
-          >
+          <div className="border border-border bg-card p-8 sm:p-10 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-muted-foreground/30" />
             <Briefcase className="w-8 h-8 text-muted-foreground mb-6" />
             <h3 className="font-display text-xl uppercase tracking-tight mb-4 text-muted-foreground">
@@ -92,15 +72,9 @@ const CareerSection = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="border border-signal/30 bg-signal/[0.03] p-8 sm:p-10 relative overflow-hidden"
-          >
+          <div className="border border-signal/30 bg-signal/[0.03] p-8 sm:p-10 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-signal" />
             <TrendingUp className="w-8 h-8 text-signal mb-6" />
             <h3 className="font-display text-xl uppercase tracking-tight mb-4 text-signal">
@@ -119,17 +93,11 @@ const CareerSection = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom emphasis */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mt-8 border border-signal/20 bg-card p-8 sm:p-12 text-center relative overflow-hidden"
-        >
+        <div className="mt-8 border border-signal/20 bg-card p-8 sm:p-12 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-signal/40 to-transparent" />
           <p className="font-body text-foreground text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
             Nei prossimi anni, chi sa costruire applicazioni con l'AI avrà un vantaggio 
@@ -139,7 +107,7 @@ const CareerSection = () => {
             l'intelligenza artificiale. Questa è la competenza del futuro.{" "}
             <span className="text-foreground font-medium">E il futuro è già iniziato.</span>
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import gridPattern from "@/assets/grid-pattern.jpg";
 
 interface AppItem {
@@ -50,18 +49,11 @@ const saasSteps = [
   "Pagamenti", "Realtime", "Monitoring", "Scalabilità"
 ];
 
-const AppCard = ({ app, index }: { app: AppItem; index: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4, delay: index * 0.04 }}
-    className="group relative bg-card border border-border p-5 hover:border-primary/40 transition-all duration-300 overflow-hidden"
-    whileHover={{ y: -3 }}
+const AppCard = ({ app }: { app: AppItem }) => (
+  <div
+    className="group relative bg-card border border-border p-5 hover:border-primary/40 transition-all duration-300 overflow-hidden hover:-translate-y-[3px]"
   >
-    {/* Hover glow */}
     <div className="absolute inset-0 bg-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    {/* Top accent on hover */}
     <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
     <div className="relative z-10">
@@ -83,16 +75,14 @@ const AppCard = ({ app, index }: { app: AppItem; index: number }) => (
       </div>
     </div>
 
-    {/* Corner accents */}
     <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
     <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-  </motion.div>
+  </div>
 );
 
 const AppsGridSection = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 overflow-hidden relative">
-      {/* Background */}
       <div className="absolute inset-0">
         <img src={gridPattern} alt="" className="w-full h-full object-cover opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
@@ -100,13 +90,7 @@ const AppsGridSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-signal" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-signal font-medium">
@@ -128,16 +112,10 @@ const AppsGridSection = () => {
             costruite una per una, progettate per farti 
             comprendere ogni concetto in modo pratico e visuale.
           </p>
-        </motion.div>
+        </div>
 
         {/* Uniqueness callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="mb-24"
-        >
+        <div className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
@@ -155,32 +133,22 @@ const AppsGridSection = () => {
                 title: "Nessun altro le ha",
                 desc: "Non troverai nulla di simile in nessun corso, bootcamp o università. Sono state create esclusivamente per questo percorso.",
               },
-            ].map((item, i) => (
-              <motion.div
+            ].map((item) => (
+              <div
                 key={item.number}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
                 className="border border-signal/20 bg-signal/[0.03] p-6 sm:p-8 relative overflow-hidden group hover:border-signal/40 transition-colors"
               >
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-signal/40 group-hover:bg-signal transition-colors" />
                 <span className="font-display text-2xl text-signal mb-3 block">{item.number}</span>
                 <h3 className="font-display text-base uppercase tracking-tight text-foreground mb-2">{item.title}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* ROADMAP ARCHITETTURALE */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
+        <div className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="flex items-center gap-3">
               <span className="font-display text-3xl text-signal">01</span>
@@ -202,21 +170,15 @@ const AppsGridSection = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
-              {roadmapArchitetturale.map((app, i) => (
-                <AppCard key={app.name} app={app} index={i} />
+              {roadmapArchitetturale.map((app) => (
+                <AppCard key={app.name} app={app} />
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* ROADMAP OPERATIVA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
+        <div className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="flex items-center gap-3">
               <span className="font-display text-3xl text-signal">02</span>
@@ -238,21 +200,15 @@ const AppsGridSection = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-              {roadmapOperativa.map((app, i) => (
-                <AppCard key={app.name} app={app} index={i} />
+              {roadmapOperativa.map((app) => (
+                <AppCard key={app.name} app={app} />
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* SaaS Evolution Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="border border-signal/30 bg-signal/[0.03] p-8 sm:p-12 relative overflow-hidden"
-        >
+        <div className="border border-signal/30 bg-signal/[0.03] p-8 sm:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-signal" />
           
           <div className="text-center mb-8">
@@ -270,15 +226,9 @@ const AppsGridSection = () => {
           <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-0">
             {saasSteps.map((step, i) => (
               <div key={step} className="flex items-center">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.08 }}
-                  className="bg-secondary border border-border px-4 py-2 hover:border-signal/40 hover:bg-signal/[0.05] transition-all"
-                >
+                <div className="bg-secondary border border-border px-4 py-2 hover:border-signal/40 hover:bg-signal/[0.05] transition-all">
                   <span className="font-body text-xs sm:text-sm text-foreground font-medium">{step}</span>
-                </motion.div>
+                </div>
                 {i < saasSteps.length - 1 && (
                   <span className="text-signal/40 mx-1 hidden sm:inline font-body text-lg">→</span>
                 )}
@@ -289,7 +239,7 @@ const AppsGridSection = () => {
           <p className="font-body text-xs text-muted-foreground text-center mt-6 uppercase tracking-wider">
             Un approccio che <span className="text-signal font-medium">non troverai in nessun altro corso online</span>
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import { useInView } from "framer-motion";
 
 const stats = [
   { value: 32, suffix: "", label: "App educative interattive" },
@@ -37,20 +37,13 @@ const StatsSection = () => {
     <section className="py-24 px-6 relative">
       <div className="section-divider mb-24" />
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="text-center"
-          >
+        {stats.map((stat) => (
+          <div key={stat.label} className="text-center">
             <AnimatedNumber value={stat.value} suffix={stat.suffix} />
             <p className="font-body text-sm text-muted-foreground uppercase tracking-widest mt-3">
               {stat.label}
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
       <div className="section-divider mt-24" />

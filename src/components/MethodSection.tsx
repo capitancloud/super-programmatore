@@ -1,24 +1,20 @@
-import { motion } from "framer-motion";
 import { Play, BookOpen, Brain, Rocket, Code } from "lucide-react";
 
 const phases = [
   {
     icon: BookOpen,
     title: "Fondamenti delle Web Application",
-    description:
-      "Capirai come funzionano davvero le applicazioni moderne: frontend, backend, database, autenticazione, API e flussi di dati.",
+    description: "Capirai come funzionano davvero le applicazioni moderne: frontend, backend, database, autenticazione, API e flussi di dati.",
   },
   {
     icon: Code,
     title: "Analisi delle Applicazioni",
-    description:
-      "Imparerai a leggere e comprendere le architetture software reali.",
+    description: "Imparerai a leggere e comprendere le architetture software reali.",
   },
   {
     icon: Brain,
     title: "Metodologie di sviluppo con l'AI",
-    description:
-      "Scoprirai come utilizzare l'AI per progettare e sviluppare software in modo più veloce ed efficace.",
+    description: "Scoprirai come utilizzare l'AI per progettare e sviluppare software in modo più veloce ed efficace.",
   },
   {
     icon: Rocket,
@@ -28,8 +24,7 @@ const phases = [
   {
     icon: Play,
     title: "Sviluppo di applicazioni reali",
-    description:
-      "Arriverai a progettare e realizzare applicazioni complete.",
+    description: "Arriverai a progettare e realizzare applicazioni complete.",
   },
 ];
 
@@ -37,29 +32,25 @@ const modules = [
   {
     number: "01",
     title: "FONDAMENTA",
-    description:
-      "Comprendi come funzionano le web application dal primo principio. Architettura, protocolli, database, frontend e backend — senza scorciatoie.",
+    description: "Comprendi come funzionano le web application dal primo principio. Architettura, protocolli, database, frontend e backend — senza scorciatoie.",
     detail: "Video + App interattive",
   },
   {
     number: "02",
     title: "IL METODO AI",
-    description:
-      "Impara le metodologie e le best practice per programmare con l'intelligenza artificiale. Prompt engineering, progettazione di sistemi, debugging assistito.",
+    description: "Impara le metodologie e le best practice per programmare con l'intelligenza artificiale. Prompt engineering, progettazione di sistemi, debugging assistito.",
     detail: "Metodologie + Pratica",
   },
   {
     number: "03",
     title: "APPLICAZIONI REALI",
-    description:
-      "Progetti pratici guidati dove costruisci applicazioni complete nel mondo reale, dalla progettazione al deploy, usando l'AI come strumento primario.",
+    description: "Progetti pratici guidati dove costruisci applicazioni complete nel mondo reale, dalla progettazione al deploy, usando l'AI come strumento primario.",
     detail: "Progetti guidati",
   },
   {
     number: "04",
     title: "ANALISI GUIDATA",
-    description:
-      "Studi approfonditi di applicazioni reali esistenti. Analizzi l'architettura, le scelte tecniche e impari a ragionare come un professionista.",
+    description: "Studi approfonditi di applicazioni reali esistenti. Analizzi l'architettura, le scelte tecniche e impari a ragionare come un professionista.",
     detail: "Case studies",
   },
 ];
@@ -68,14 +59,7 @@ const MethodSection = () => {
   return (
     <section id="metodo" className="py-20 sm:py-32 px-4 sm:px-6 relative">
       <div className="max-w-5xl mx-auto">
-        {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          className="mb-20"
-        >
+        <div className="mb-20">
           <div className="flex items-center gap-4 mb-10">
             <div className="w-8 h-[1px] bg-primary" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-medium">
@@ -88,17 +72,10 @@ const MethodSection = () => {
             <br />
             <span className="text-signal">NON UN VIDEOCORSO.</span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* 20 ore video corso highlight */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 border border-primary/30 bg-card relative overflow-hidden"
-        >
-          {/* Top accent bar */}
+        <div className="mb-16 border border-primary/30 bg-card relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary" />
 
           <div className="p-8 sm:p-12">
@@ -117,15 +94,11 @@ const MethodSection = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {phases.map((phase, i) => {
+              {phases.map((phase) => {
                 const Icon = phase.icon;
                 return (
-                  <motion.div
+                  <div
                     key={phase.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.08 }}
                     className="group relative border border-border bg-secondary/50 p-5 hover:border-primary/30 transition-all duration-300"
                   >
                     <div className="flex items-start gap-3">
@@ -141,25 +114,20 @@ const MethodSection = () => {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Module cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {modules.map((mod, i) => (
-            <motion.div
+          {modules.map((mod) => (
+            <div
               key={mod.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
               className="group relative border border-border bg-card p-8 sm:p-10 hover:border-primary/30 transition-all duration-500"
             >
-              {/* Hover glow effect */}
               <div className="absolute inset-0 bg-primary/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
@@ -179,20 +147,13 @@ const MethodSection = () => {
                 </p>
               </div>
 
-              {/* Corner accent */}
               <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-8 border border-primary/20 bg-primary/[0.03] p-8 sm:p-12 relative overflow-hidden"
-        >
+        <div className="mt-8 border border-primary/20 bg-primary/[0.03] p-8 sm:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary/50 via-primary/20 to-transparent" />
           <p className="font-body text-foreground text-lg leading-relaxed relative z-10">
             20 ore di formazione video approfondita. Spiegazioni dettagliate. Progetti reali.
@@ -203,7 +164,7 @@ const MethodSection = () => {
             </span>
             .
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
