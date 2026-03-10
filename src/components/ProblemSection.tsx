@@ -36,14 +36,16 @@ const ProblemSection = () => {
             <p>
               Le aziende cercano una nuova figura professionale: qualcuno che sappia 
               <span className="text-foreground font-medium"> pensare come un architetto del software</span> e 
-              usare l'AI per trasformare idee in sistemi funzionanti.
+              usare l'AI per trasformare idee in sistemi funzionanti. 
+              Non servono anni di studio su sintassi e framework.{" "}
+              <span className="text-signal font-semibold">Non serve nemmeno saper programmare.</span>
             </p>
             
             {/* Pull quote */}
             <div className="border-l-2 border-primary pl-6 py-4 my-10">
               <p className="text-foreground text-xl sm:text-2xl font-body font-light italic leading-relaxed">
-                "Non servono anni di studio su sintassi e framework. 
-                Serve una <span className="text-signal font-medium not-italic">mentalità nuova</span>."
+                "Parti da zero? Perfetto. Questo percorso è pensato per chi vuole imparare 
+                a costruire software con l'AI, <span className="text-signal font-medium not-italic">senza alcuna esperienza precedente</span>."
               </p>
             </div>
             

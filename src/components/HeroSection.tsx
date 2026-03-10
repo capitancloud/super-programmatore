@@ -93,6 +93,14 @@ const HeroSection = () => {
             per costruirlo.
           </p>
 
+          {/* No coding badge */}
+          <div className="mt-6 inline-flex items-center gap-3 border border-primary/20 bg-primary/[0.05] px-5 py-2.5">
+            <span className="w-2 h-2 bg-primary rounded-full" />
+            <span className="font-body text-sm text-foreground font-medium tracking-wide">
+              Non serve saper programmare
+            </span>
+          </div>
+
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#offerta"
