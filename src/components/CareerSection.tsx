@@ -127,7 +127,7 @@ const CareerSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          transition={{ duration: 0.5 }}
           className="mt-8 border border-signal/20 bg-card p-8 sm:p-12 text-center relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-signal/40 to-transparent" />
