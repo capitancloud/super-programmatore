@@ -47,7 +47,7 @@ const FreeLessonSection = () => {
           {/* Outer glow */}
           <div className="absolute -inset-[1px] bg-gradient-to-b from-primary/30 via-primary/10 to-primary/30" />
 
-          <div className="relative bg-card p-10 sm:p-14 text-center">
+          <div className="relative bg-card p-8 sm:p-14 text-center">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary" />
 
             <div className="w-14 h-14 border border-primary/40 bg-primary/[0.08] flex items-center justify-center mx-auto mb-6">
