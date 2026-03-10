@@ -16,6 +16,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <StatsSection />
+      <VideoSection />
       <ProblemSection />
       <MethodSection />
       <AppsGridSection />
