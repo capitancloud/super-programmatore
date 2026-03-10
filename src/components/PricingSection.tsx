@@ -37,13 +37,13 @@ const PricingSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-3 bg-signal/10 border border-signal/30 px-6 py-3 mb-16"
+          className="inline-flex items-center gap-2 sm:gap-3 bg-signal/10 border border-signal/30 px-4 sm:px-6 py-3 mb-16 text-center"
         >
-          <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0" />
-          <span className="font-body text-sm text-signal font-semibold">
+          <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0 hidden sm:block" />
+          <span className="font-body text-xs sm:text-sm text-signal font-semibold">
             Il prezzo tornerà a 997€ a brevissimo — questa offerta non durerà
           </span>
-          <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0" />
+          <AlertTriangle className="w-4 h-4 text-signal flex-shrink-0 hidden sm:block" />
         </motion.div>
 
         <motion.div
