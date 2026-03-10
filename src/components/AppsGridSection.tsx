@@ -105,25 +105,72 @@ const AppsGridSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center mb-12"
         >
           <div className="flex items-center justify-center gap-4 mb-10">
-            <div className="w-8 h-[1px] bg-primary" />
-            <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-medium">
-              Elemento distintivo
+            <div className="w-8 h-[1px] bg-signal" />
+            <span className="font-body text-xs uppercase tracking-[0.3em] text-signal font-medium">
+              Unico nel suo genere
             </span>
-            <div className="w-8 h-[1px] bg-primary" />
+            <div className="w-8 h-[1px] bg-signal" />
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight leading-[1.1] mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[1.05] mb-6">
             <span className="text-signal">32</span> WEB APP
             <br />
             EDUCATIVE INTERATTIVE
           </h2>
-          <p className="font-body text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Non slides. Non PDF. Applicazioni web reali progettate per farti 
+          <p className="font-body text-foreground text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed mb-4">
+            Qualcosa che <span className="text-signal font-semibold">non esiste</span> in nessun altro corso online.
+          </p>
+          <p className="font-body text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
+            Non slides. Non PDF. Non semplici video. Applicazioni web reali, 
+            costruite una per una, progettate per farti 
             comprendere ogni concetto in modo pratico e visuale.
           </p>
+        </motion.div>
+
+        {/* Uniqueness callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="mb-24"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                number: "01",
+                title: "Impari facendo",
+                desc: "Ogni app è un ambiente interattivo dove sperimenti i concetti in prima persona — non li leggi su una slide.",
+              },
+              {
+                number: "02",
+                title: "Progettate per la comprensione",
+                desc: "Centinaia di ore di lavoro per creare strumenti didattici che rendono semplici anche i concetti più complessi.",
+              },
+              {
+                number: "03",
+                title: "Nessun altro le ha",
+                desc: "Non troverai nulla di simile in nessun corso, bootcamp o università. Sono state create esclusivamente per questo percorso.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.number}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+                className="border border-signal/20 bg-signal/[0.03] p-6 sm:p-8 relative overflow-hidden group hover:border-signal/40 transition-colors"
+              >
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-signal/40 group-hover:bg-signal transition-colors" />
+                <span className="font-display text-2xl text-signal mb-3 block">{item.number}</span>
+                <h3 className="font-display text-base uppercase tracking-tight text-foreground mb-2">{item.title}</h3>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* ROADMAP ARCHITETTURALE */}
