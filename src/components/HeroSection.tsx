@@ -72,7 +72,7 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight leading-[1.05] min-h-[2em]">
+        <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight leading-[1.05] min-h-[3em] sm:min-h-[2em]">
           <span className="text-foreground">{displayedText}</span>
           <span className="inline-block w-[3px] h-[0.8em] bg-primary align-middle ml-1 cursor-blink" />
         </h1>
