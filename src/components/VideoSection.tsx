@@ -43,7 +43,7 @@ const VideoSection = () => {
           {/* Video container - 16:9 aspect ratio */}
           <div className="relative bg-card aspect-video flex items-center justify-center overflow-hidden">
             {/* Placeholder - will be replaced with video embed */}
-            <div className="absolute inset-0 bg-gradient-to-br from-card via-secondary to-card" />
+            <img src={videoCover} alt="Super Programmatore" className="absolute inset-0 w-full h-full object-contain bg-black" />
 
             {/* Grid overlay */}
             <div className="absolute inset-0 grid-overlay opacity-20" />
