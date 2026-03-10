@@ -70,6 +70,7 @@ const PricingSection = () => {
                 "Metodologie AI per lo sviluppo software",
                 "Analisi guidata di applicazioni reali",
                 "Accesso a tutti gli aggiornamenti futuri",
+                "Attestato di AI Application Builder",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="text-signal font-bold text-lg leading-none mt-[-2px]">—</span>
