@@ -16,7 +16,7 @@ const Navbar = () => {
           </span>
         </div>
         <a
-          href="#offerta"
+          href="https://studenti.accademiadelcloud.it/p/diventa-un-super-programmatore"
           className="hidden sm:inline-flex items-center gap-2 border border-primary/30 text-primary font-body text-xs font-semibold uppercase tracking-widest px-5 py-2.5 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
         >
           <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
