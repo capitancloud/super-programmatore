@@ -65,6 +65,8 @@ const PricingSection = () => {
               {[
                 "20 ore di formazione video approfondita",
                 "32 applicazioni educative interattive",
+                "20 infografiche ad alta qualità",
+                "Slide in formato PDF",
                 "Progetti pratici nel mondo reale",
                 "Metodologie AI per lo sviluppo software",
                 "Analisi guidata di applicazioni reali",
